@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Card } from 'ui-controls';
+import { assassins } from './assassins';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-components';
+  cards: Card[] = assassins;
+
+  onCardChange(cards: Card[]) {
+    console.log(cards);
+  }
+
+  log() {
+
+    alert(this.title + ' copied to the clipboard');
+  
+  }
+
 }
